@@ -1,0 +1,19 @@
+@import './global';
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 45px;
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

@@ -1,0 +1,71 @@
+@import '../../global';
+
+  .tab {
+    display: inline-block;
+    cursor: pointer;
+    background: #F2F0F0;
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 20px;
+    grid-column-start: 1;
+
+    .titleContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .arrow {
+        margin-left: 20px;
+        display: none;
+      }
+    }
+
+    .title, > p {
+      margin: 0;
+      max-width: 500px;
+      color: #2B3343;
+    }
+
+    > p {
+      margin-top: 16px;
+    }
+
+    &:hover {
+      background: #e7e4e4;
+      transition: 0.1s ease-in-out;
+    }
+
+    @media screen and (max-width: $mobileWidth) {
+      padding-right: 20px;
+
+      .title {
+        font-size: 20px;
+      }
+      > p {
+        font-size: 12px;
+      }
+      .titleContainer {
+        .arrow {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .last {
+    margin-bottom: 0;
+  }
+
+  .tabActive {
+    background: #0078EE;
+    > * {
+      color: white;
+    }
+    &:hover {
+      background: #4b9bf8;
+      transition: 0.1s ease-in-out;
+    }
+  }
+
+  :last-child {
+    margin-bottom: 0;
+ }
+
